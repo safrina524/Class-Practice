@@ -1,0 +1,722 @@
+
+            /* COMMON CSS STARTS HERE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryFont: 'Arimo', sans-serif;
+    --secondaryFont: 'Abril Fatface', serif;
+    --skyColor: #00b8ef;
+    --cardBackground: #46cdf3;
+    --navLiBorderColor: #2cc5f2;
+    --navBorderColor: #abe5fa;
+    --generalFontColor: #444444;
+    --headingFontColor: #222222;
+    --greyFontColor: #777777;
+    --navFontColor: #848484;
+    --greyBackground: #f5f5f5;
+}
+
+.container{
+    width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-Y-axix{
+  align-items: center;
+}
+
+.justify-X-axix{
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+body{
+    font-family: var(--primaryFont);
+    color: var(--generalFontColor);
+    background-color: #fef8ff;
+}
+    
+button{
+    display: inline-block;
+    background-color: var(--skyColor);
+    font-family: var(--primaryFont);
+    padding: 20px 17px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+h1{
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    font-size: 58px;
+}
+
+h2{
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 53px;
+}
+
+h3{
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    font-size: 46px;
+}
+
+h4{
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+h5{
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    font-size: 20px;
+}
+
+h6{
+    color: var(--headingFontColor);
+    font-family: var(--primaryFont);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+            /* COMMON CSS ENDS HERE */
+
+            /* NAVBAR STARTS HERE */
+nav::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #abe5fa;
+    position: absolute;
+}
+
+nav .logo{
+    width: 14%;
+}
+
+nav .menu{
+    width: 65%;
+    text-align: right;
+    margin-left: 50px;
+}
+
+nav .menu ul li{
+    display: inline-block;
+}
+
+nav .menu ul li a{
+    display: block;
+    position: relative;
+    color: var(--greyFontColor);
+    font-family: var(--primaryFont);
+    font-size: 20px;
+    padding: 100px 0;
+    margin: 0 20px;
+    transition: 0.25s ease;
+}
+
+nav .menu ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--skyColor);
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+nav .menu ul li:hover a{
+    color: var(--skyColor);
+}
+
+nav .menu ul li:hover a::before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+            /* NAVBAR ENDS HERE */
+
+            /* BANNER STARTS HERE */
+#banner{
+    height: 550px;
+    background-color: #fdf5ff;
+}
+
+.banner_content{
+    width: 50%;
+}
+
+.banner_content p{
+    color: var(--generalFontColor);
+    font-family: var(--primaryFont);
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.banner_img{
+    width: 50%;
+    text-align: right;
+}
+
+.banner_img img{
+    margin-right: -90px;
+}
+            /* BANNER ENDS HERE */
+
+            /* CATEGORY STARTS HERE */
+.heading{
+    width: 570px;
+    text-align: center;
+    margin: auto;
+}
+
+.heading p{
+    font-size: 16px;
+    font-family: var(--primaryFont);
+    color: var(--generalFontColor);
+    line-height: 20px;
+}
+
+.heading h2{
+    position: relative;
+}
+
+.heading h2::before{
+    content: '';
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--skyColor);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -25px;
+}
+
+#category{
+    margin-top: 20px;
+}
+
+.categories{
+    margin: 90px 0 175px 0;
+}
+
+.categories .row{
+    justify-content: space-between;
+}
+
+.categories :nth-child(1){
+    margin-left: 0;
+}
+
+.categories :nth-child(4){
+    margin-right: 0;
+}
+
+.categories :nth-child(5){
+    margin-left: 0;
+}
+
+.categories :nth-child(8){
+    margin-right: 0;
+}
+
+.cate_card{
+    width: calc(25% - 30px);
+    padding: 76px 0;
+    text-align: center;
+    background-color: var(--greyBackground);
+    margin: 20px 15px;
+    box-shadow: 3px 5px 8px rgba(150, 150, 150, 0.879);
+    border-radius: 8px;
+    position: relative;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.cate_card:hover{
+    background-color: var(--cardBackground);
+    transform: scale(1.22);
+}
+
+.cate_card img{
+    margin-top: -10px;
+}
+
+.cate_card p{
+    color: var(--greyFontColor);
+    font-family: var(--primaryFont);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.cate_card button{
+    margin: auto;
+    color: var(--skyColor);
+    background-color: white;
+    padding: 16px 20px;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cate_card:hover button{
+    opacity: 1;
+    visibility: visible;
+}
+
+            /* CATEGORY ENDS HERE */
+
+            /* WORKS STARTS HERE */
+#how_works{
+    padding: 50px 0 100px 0;
+}
+
+.works{
+    margin: 63px 0;
+}
+
+.work_card{
+    width: 370px;
+    text-align: center;
+}
+
+.work_card .row{
+    justify-content: space-between;
+}
+
+.work_card h5{
+    margin: 10px 0;
+}
+
+.work_card p{
+    color: var(--generalFontColor);
+    font-family: var(--primaryFont);
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 22px;
+}
+
+.work_card img{
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.work_card:hover img{
+    transform: scale(1.1);
+    padding: 20px;
+    background-color: var(--skyColor);
+}
+            /* WORKS ENDS HERE */
+
+            /* REMOTE STARTS HERE */
+#top_remote{   
+    padding: 50px 0 100px 0;
+    background-color: var(--greyBackground);
+}
+
+.remote_cards{
+    margin: 60px 0;
+}
+
+.remote_cards .row{
+    justify-content: space-between;
+}
+
+.web_card{
+    width: calc(33.333% - 30px);
+    background-color: var(--greyBackground);
+    box-shadow: 3px 5px 8px rgba(150, 150, 150, 0.879);
+    border-radius: 8px;
+    color: var(--headingFontColor);
+    padding: 30px;
+    transition: 0.25s ease;
+    margin-top: 15px;
+}
+/* ###############    HOVERS   #################### */
+
+.web_card:hover{
+    margin-top: 0;
+    background-color: white;
+    box-shadow: 3px 5px 25px rgba(150, 150, 150, 0.879);
+
+}
+
+/* ################################################ */
+
+.web_card .face{
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.web_card .face .number p{
+    position: absolute;
+    color: white;
+    font-family: var(--secondaryFont);
+    font-size: 24px;
+    background-color: var(--skyColor);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    text-align: center;
+    top: 60%;
+    right: 65px;
+    outline: 2px solid white;
+    padding: 8px 0;
+}
+
+/* ################################################ */
+
+.web_card .name{
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+/* ################################################ */
+
+.web_card .star .row{
+    justify-content: center;
+}
+
+.web_card .star span{
+    color: #f68b1e;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+
+/* ################################################ */
+
+.web_info{
+    margin-top: 30px;
+}
+
+.web_info .info_row{
+    padding: 20px 0;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.web_info .info_row h6{
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: none;
+}
+
+.web_info .second{
+    position: relative;
+    border: none;
+}
+
+.web_info .second p{
+    right: 25px;
+    position: absolute;
+}
+
+/* ################################################ */
+
+.view{
+    margin-top: 30px;
+    position: relative;
+}
+
+.view p{
+    color: var(--headingFontColor);
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.view a::after{
+    content: '';
+    width: 300px;
+    height: 3.5px;
+    background-color: var(--skyColor);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -38px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s;
+}
+
+.web_card:hover a::after{
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px;
+    height: 4px;
+}
+
+            /* REMOTE ENDS HERE */
+
+            /* MILESTONE STARTS HERE */
+#milestone_partners{
+    margin: 100px 0 100px 0;
+}
+
+.milestone{
+    width: 50%;
+    color: var(--headingFontColor);
+    font-family: var(--secondaryFont);
+    margin-top: 80px;
+}
+
+.milestone h4{
+    margin: 0;
+}
+
+.mile_left{
+    width: 50%;
+    border: 1px solid #dddddd;
+    border-left: none;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.mile_right{
+    width: 50%;
+    border: 1px solid #dddddd;
+    border-right: none;
+    padding-left: 30px;
+}
+
+.mile_top{
+    border-top: none;
+    padding-top: 70px;
+}
+
+.mile_bottom{
+    border-bottom: none;
+    padding-top: 30px;
+}
+
+/* ##################################################################### */
+
+.partners{
+    width: 50%;
+    margin-top: 190px;
+    text-align: center;
+    right: 0;
+}
+
+.partner_img{
+    width: 50%;
+}
+
+.partner_img img{
+    outline: 1px solid #c2c1c1;
+    padding: 30px;
+    margin: 20px;
+    transition: 0.4s ease;
+}
+
+.partner_img:hover img{
+    outline: none;
+    transform: scale(1.1);
+}
+
+.partners:nth-child(2){
+    margin-right: 0;
+}
+
+.partners:nth-child(4){
+    margin-right: 0;
+}
+            /* MILESTONE ENDS HERE */
+
+            /* JOB OPPORTUNITY STARTS HERE */
+#footing{
+    padding: 30px 0 130px 0;
+    background-image: url(../images/footing\ background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #0c0909c6;
+}
+
+#footing .heading{
+    margin-bottom: 80px;
+}
+
+.footing_cards h4{
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    position: relative;
+}
+
+.footing_cards h4::before{
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: var(--skyColor);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -18px;
+}
+
+.footing_cards .row{
+    justify-content: space-between;
+}
+
+.footing_cards .list{
+    margin-top: 48px;
+    color: white;
+    font-family: var(--primaryFont);
+    font-size: 16px;
+}
+
+.footing_cards .list li{
+    padding: 15px 0 15px 15px;
+    transition: 0.3s ease;
+}
+
+.footing_cards .list li a{
+    color: white;
+}
+
+.footing_cards .list li:hover{
+    padding-left: 35px;
+}
+
+.footing_cards .list li:hover a{
+    color: var(--skyColor);
+}
+
+/* ####################################### */
+.aboutus{
+    width: 32%;
+}
+
+.aboutus p{
+    color: white;
+    font-family: var(--primaryFont);
+    font-size: 16px;
+    line-height: 28px;
+    margin: 55px 0 30px 0;
+}
+
+.aboutus a{
+    color: var(--skyColor);
+    font-family: var(--primaryFont);
+    font-size: 20px;
+}
+/* ####################################### */
+
+.candidates{
+    width: 15%;
+}
+
+/* ####################################### */
+
+.employees{
+    width: 16%;
+}
+
+/* ####################################### */
+
+.subscribe{
+    width: 32%;
+}
+
+.subscribe p{
+    color: white;
+    font-size: 16px;
+    font-family: var(--primaryFont);
+    margin: 55px 0 33px 0;
+}
+
+.subscribe input{
+    padding: 16px 0 15px 0;
+    width: 240px;
+    margin-right: -5px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+.subscribe button{
+    margin: 0;
+    padding: 15px 20px;
+    border-radius: 0;
+}
+
+.subscribe button:hover{
+    background-color: var(--skyColor);
+    color: white;
+    opacity: 0.9;
+}
+
+.subscribe .socials a{
+    display: inline-block;
+    color: var(--skyColor);
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 14px;
+    margin: 40px 2px;
+    transition: 0.3s ease;
+}
+
+.subscribe .socials span a{
+    padding: 14px 16px 13px 16px;
+}
+
+.subscribe .socials a:hover{
+    color: white;
+    background-color: var(--skyColor);
+}
+            /* JOB OPPORTUNITY ENDS HERE */
+
+
+
+
+
+
